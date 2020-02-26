@@ -18,6 +18,9 @@ class SortComparison {
      *
      */
     static double [] insertionSort (double a[]){
+        if (a == null) {
+            return a;
+        }
         for (int i = 1; i <a.length ; ++i) {
             double val = a[i];
             int j = i-1;
@@ -38,6 +41,9 @@ class SortComparison {
      *
      */
     static double [] selectionSort (double a[]){
+        if (a == null) {
+            return a;
+        }
         for (int i = 0; i <a.length ; i++) {
             int c = i;
             for (int j = i+1; j <a.length ; j++) {
@@ -59,6 +65,9 @@ class SortComparison {
      *
      */
     static double [] quickSort (double a[]){
+        if (a == null) {
+            return a;
+        }
         recursiveQSort(a, 0, a.length-1);
         return a;
     }
@@ -102,6 +111,9 @@ class SortComparison {
      */
 
     static double[] mergeSortIterative (double a[]) {
+        if (a == null) {
+            return a;
+        }
         int current_size;
         int left_start;
 
@@ -147,7 +159,7 @@ class SortComparison {
             i++;
             k++;
         }
-        while(j<n1){
+        while(j<n2){
             a[k] = R[j];
             j++;
             k++;
